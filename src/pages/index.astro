@@ -31,6 +31,13 @@ const posts = (await getCollection("blog")).sort(
       >
         The Sceptical Trader
       </h1>
+      <section class="mb-10">
+        Hi! I'm Mihail and I'm documenting my journey into quant trading. Wanna
+        talk? Reach out to me <a
+          href="https://linkedin.com/in/mihailmarian"
+          class="text-blue-300 hover:underline">on LinkedIn</a
+        >.
+      </section>
       <section>
         <ul>
           {posts.map((post) => <Post post={post} />)}
