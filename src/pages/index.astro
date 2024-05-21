@@ -1,5 +1,10 @@
 ---
+import { getCollection } from "astro:content";
+import Post from "../components/Post.astro";
 
+const posts = (await getCollection("blog")).sort(
+  (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()
+);
 ---
 
 <html lang="en">
@@ -18,12 +23,19 @@
     />
   </head>
   <body
-    class="max-w-3xl mx-auto min-h-screen px-6 py-6 sm:px-8 bg-neutral-800 text-white font-roboto"
+    class="max-w-3xl mx-auto min-h-screen px-6 py-10 sm:px-8 bg-neutral-800 text-white font-roboto"
   >
-    <h1
-      class="font-medium text-center text-3xl md:text-5xl xtracking-tighter py-6 overflow-hidden"
-    >
-      The Sceptical Trader
-    </h1>
+    <main>
+      <h1
+        class="font-medium text-3xl md:text-5xl xtracking-tighter mb-10 overflow-hidden"
+      >
+        The Sceptical Trader
+      </h1>
+      <section>
+        <ul>
+          {posts.map((post) => <Post post={post} />)}
+        </ul>
+      </section>
+    </main>
   </body>
 </html>

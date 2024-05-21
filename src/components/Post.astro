@@ -1,0 +1,26 @@
+---
+import type { CollectionEntry } from "astro:content";
+
+type Props = { post: CollectionEntry<"blog"> };
+
+const { post } = Astro.props;
+---
+
+<li class="grid grid-cols-[auto,1fr] gap-4">
+  <div class="flex items-center">
+    <span class="text-sm">
+      {
+        post.data.pubDate.toLocaleDateString("en-us", {
+          year: "numeric",
+          month: "short",
+          day: "numeric",
+        })
+      }
+    </span>
+  </div>
+  <div>
+    <a href={post.slug} class="text-blue-300 hover:underline"
+      >{post.data.title}</a
+    >
+  </div>
+</li>
