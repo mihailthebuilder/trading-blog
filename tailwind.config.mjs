@@ -4,7 +4,7 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        roboto: ["Roboto Slab", "Times New Roman"],
+        roboto: ["Roboto Slab Variable", "Times New Roman"],
       },
     },
   },
