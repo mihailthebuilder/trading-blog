@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scepticaltrader.com/sitemap-index.xml
+Sitemap: https://scepticalquant.com/sitemap-index.xml
