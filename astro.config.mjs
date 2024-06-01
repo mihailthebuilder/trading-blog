@@ -6,6 +6,6 @@ import sitemap from "@astrojs/sitemap";
 
 // https://astro.build/config
 export default defineConfig({
-  site: "https://scepticaltrader.com",
-  integrations: [mdx(), tailwind(), sitemap()]
+  site: "https://scepticalquant.com",
+  integrations: [mdx(), tailwind(), sitemap()],
 });
