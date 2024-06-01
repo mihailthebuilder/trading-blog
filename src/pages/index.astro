@@ -1,7 +1,9 @@
 ---
 import { getCollection } from "astro:content";
-import Post from "../components/Post.astro";
 import "@fontsource-variable/roboto-slab";
+
+import Post from "../components/Post.astro";
+import Link from "../components/Link.astro";
 
 const title = "The Sceptical Trader";
 const description =
@@ -57,7 +59,7 @@ const posts = (await getCollection("blog")).sort(
     } -->
   </head>
   <body
-    class="max-w-3xl mx-auto min-h-screen px-6 py-10 sm:px-8 bg-neutral-800 text-gray-200 font-roboto tracking-wide"
+    class="max-w-3xl mx-auto min-h-screen px-6 py-10 sm:px-8 bg-gray-100 font-roboto tracking-wide"
   >
     <main>
       <h1
@@ -67,10 +69,9 @@ const posts = (await getCollection("blog")).sort(
       </h1>
       <section class="mb-10">
         Hi! I'm Mihail and I'm documenting my journey into quant trading. Wanna
-        talk? Reach out to me <a
-          href="https://linkedin.com/in/mihailmarian"
-          class="text-blue-300 hover:underline"
-          target="_blank">on LinkedIn</a
+        talk? Reach out to me <Link
+          url="https://linkedin.com/in/mihailmarian"
+          newTab>on LinkedIn</Link
         >.
       </section>
       <section>
