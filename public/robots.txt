@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://scepticalquant.com/sitemap-index.xml
+Sitemap: https://learningquant.com/sitemap-index.xml
