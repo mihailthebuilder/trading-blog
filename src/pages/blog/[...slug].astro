@@ -22,12 +22,16 @@ const { Content } = await post.render();
     <BaseHead title={post.data.title} description={post.data.description} />
   </head>
 
-  <body>
+  <body class="max-w-prose mx-auto px-6 sm:px-8 bg-gray-100 font-roboto">
     <header>
-      <nav>
-        <a href="/">{SITE_TITLE}</a>
+      <nav class="py-5">
+        <a href="/" class="font-bold text-xl">{SITE_TITLE}</a>
       </nav>
     </header>
-    <Content />
+    <hr class="border-t-1 border-gray-600 mb-8" />
+    <main>
+      <h1 class="text-4xl font-bold mb-10">{post.data.title}</h1>
+      <Content />
+    </main>
   </body>
 </html>
