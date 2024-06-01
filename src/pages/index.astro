@@ -21,12 +21,10 @@ const posts = (await getCollection("blog")).sort(
     <BaseHead title={SITE_TITLE} description={description} />
   </head>
   <body
-    class="max-w-3xl mx-auto min-h-screen px-6 py-10 sm:px-8 bg-gray-100 font-roboto tracking-wide"
+    class="max-w-3xl mx-auto min-h-screen px-6 py-10 sm:px-8 bg-gray-100 font-roboto"
   >
     <main>
-      <h1
-        class="font-medium text-3xl md:text-5xl tracking-tighter mb-10 overflow-hidden"
-      >
+      <h1 class="font-medium text-3xl md:text-5xl mb-10">
         The Sceptical Trader
       </h1>
       <section class="mb-10">
