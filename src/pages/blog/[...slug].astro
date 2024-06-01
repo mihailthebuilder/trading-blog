@@ -35,7 +35,7 @@ const { Content } = await post.render();
         <h1 class="text-4xl font-bold">{post.data.title}</h1>
         <p class="text-sm mt-2">{formatDate(post.data.pubDate)}</p>
       </section>
-      <section>
+      <section class="blogpost-content">
         <Content />
       </section>
     </main>
