@@ -6,6 +6,7 @@
 - share icons
 - form
 - time element for `FormattedDate` (see tiktokexamples.com)
+- fonts load faster
 
 ## Blog post ideas
 
