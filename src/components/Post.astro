@@ -21,6 +21,6 @@ const { post } = Astro.props;
     </span>
   </div>
   <div>
-    <Link url={post.slug}>{post.data.title}</Link>
+    <Link url={`/blog/${post.slug}`}>{post.data.title}</Link>
   </div>
 </li>
