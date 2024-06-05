@@ -8,4 +8,8 @@ import sitemap from "@astrojs/sitemap";
 export default defineConfig({
   site: "https://learningquant.com",
   integrations: [mdx(), tailwind(), sitemap()],
+  redirects: {
+    "/blog/mihail-blog-introduction": "/blog/202406/mihail-blog-introduction",
+    "/blog/why-algorithmic-trading": "/blog/202406/why-algorithmic-trading",
+  },
 });
