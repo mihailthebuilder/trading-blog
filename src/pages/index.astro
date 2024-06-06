@@ -28,16 +28,19 @@ const posts = (await getCollection("blog")).sort(
         {SITE_TITLE}
       </h1>
       <section class="mb-6">
-        Hi! I'm Mihail and I'm documenting my journey into algorithmic trading.
-        Want to talk? Reach out to me <Link
-          url="https://linkedin.com/in/mihailmarian"
-          newTab>on LinkedIn</Link
-        >.
+        <p class="mb-1">
+          Hi! I'm Mihail, a software engineer based in the UK, and I'm
+          documenting my journey into algorithmic trading.
+        </p>
+        <p>
+          Want to talk? Reach out to me <Link
+            url="https://linkedin.com/in/mihailmarian"
+            newTab>on LinkedIn</Link
+          >.
+        </p>
       </section>
       <section>
-        <ul>
-          {posts.map((post) => <Post post={post} />)}
-        </ul>
+        <ul class="space-y-1">{posts.map((post) => <Post post={post} />)}</ul>
       </section>
     </main>
   </body>
