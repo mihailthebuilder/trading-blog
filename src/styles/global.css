@@ -18,4 +18,8 @@ p {
       @apply mb-2;
     }
   }
+
+  code {
+    @apply bg-gray-300 text-orange-700 font-mono p-1 rounded tracking-tight;
+  }
 }
