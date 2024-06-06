@@ -12,11 +12,7 @@ p {
   }
 
   ol {
-    @apply list-decimal pl-4 mb-5;
-
-    li {
-      @apply mb-2;
-    }
+    @apply list-decimal pl-4 mb-4 space-y-1;
   }
 
   code {
