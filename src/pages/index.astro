@@ -23,25 +23,33 @@ const posts = (await getCollection("blog")).sort(
   <body
     class="max-w-prose mx-auto min-h-screen px-6 py-10 sm:px-8 bg-gray-100 font-roboto"
   >
-    <main>
+    <main class="space-y-8">
       <h1 class="font-bold md:font-medium text-3xl md:text-5xl mb-10">
         {SITE_TITLE}
       </h1>
-      <section class="mb-6">
+      <section>
         <p>
           Hi! I'm Mihail, a software engineer based in the UK. I'm documenting
           my journey into algorithmic trading - hopefully you'll find it
           informative, or at least entertaining.
         </p>
-        <p>
-          Want to talk? Reach out to me <Link
-            url="https://linkedin.com/in/mihailmarian"
-            newTab>on LinkedIn</Link
-          > (make sure you add a message).
-        </p>
       </section>
       <section>
+        <h2 class="font-bold text-3xl mb-3">Posts</h2>
         <ul class="space-y-1">{posts.map((post) => <Post post={post} />)}</ul>
+      </section>
+      <section>
+        <h2 class="font-bold text-3xl mb-3">Contact</h2>
+        <p>
+          The best way to reach out to me is <Link
+            url="https://linkedin.com/in/mihailmarian">via LinkedIn</Link
+          >; make sure you add a message in the connection invite.
+        </p>
+        <p>
+          Another option is to send a message via <Link
+            url="https://forms.gle/tz3325pey9SjgV9X9">this hideous form</Link
+          >. Include your email address if you'd like me to reply.
+        </p>
       </section>
     </main>
   </body>
