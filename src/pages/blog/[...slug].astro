@@ -3,6 +3,7 @@ import { type CollectionEntry, getCollection } from "astro:content";
 
 import BaseHead from "../../components/BaseHead.astro";
 import Footer from "../../components/Footer.astro";
+import Link from "../../components/Link.astro";
 import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../utils";
 
@@ -40,8 +41,18 @@ const { Content } = await post.render();
       <section class="blogpost-content">
         <Content />
       </section>
+
+      <hr class="border-t-1 border-gray-600 mt-10 mb-5" />
+
+      <p>
+        Want to talk to me about this post? Hit me up <Link
+          url="https://linkedin.com/in/mihailmarian">on LinkedIn</Link
+        >; make sure you add a message in the connection invite. Alternatively,
+        use <Link url="https://forms.gle/tz3325pey9SjgV9X9"
+          >this hideous form</Link
+        >. Include your email address if you'd like me to reply.
+      </p>
     </main>
-    <hr class="border-t-1 border-gray-600 mt-10 mb-5" />
 
     <Footer />
   </body>
