@@ -9,7 +9,7 @@ type Props = { post: CollectionEntry<"blog"> };
 const { post } = Astro.props;
 ---
 
-<li class="grid grid-cols-[auto,1fr] gap-4">
+<li class="grid grid-cols-[6rem,auto] gap-3">
   <div>
     <span class="text-sm">
       {formatDate(post.data.pubDate)}
