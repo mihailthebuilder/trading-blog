@@ -5,6 +5,7 @@ import "@fontsource-variable/roboto-slab";
 import Post from "../components/Post.astro";
 import Link from "../components/Link.astro";
 import BaseHead from "../components/BaseHead.astro";
+import Disclaimer from "../components/Disclaimer.astro";
 
 import { SITE_TITLE } from "../consts";
 
@@ -33,6 +34,7 @@ const posts = (await getCollection("blog")).sort(
           my journey into algorithmic trading - hopefully you'll find it
           informative, or at least entertaining.
         </p>
+        <Disclaimer />
       </section>
       <section>
         <h2 class="font-bold text-3xl mb-3">Posts</h2>
