@@ -1,7 +1,6 @@
 ---
 import type { CollectionEntry } from "astro:content";
 
-import Link from "./Link.astro";
 import { formatDate } from "../utils";
 
 type Props = { post: CollectionEntry<"blog"> };
@@ -16,6 +15,6 @@ const { post } = Astro.props;
     </span>
   </div>
   <div>
-    <Link url={`/blog/${post.slug}`}>{post.data.title}</Link>
+    <a href={`/blog/${post.slug}`}>{post.data.title}</a>
   </div>
 </li>

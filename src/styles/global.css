@@ -2,13 +2,13 @@ p {
   @apply mb-2;
 }
 
+a {
+  @apply text-blue-600 hover:underline;
+}
+
 .blogpost-content {
   h2 {
     @apply text-2xl font-bold mb-3;
-  }
-
-  a {
-    @apply text-blue-600 hover:underline;
   }
 
   ol {
