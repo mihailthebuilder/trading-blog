@@ -10,7 +10,7 @@ import Disclaimer from "../components/Disclaimer.astro";
 import { SITE_TITLE } from "../consts";
 
 const description =
-  "Documenting Mihail Marian's journey into algorithmic trading. I'll be analysing the world of financial markets and quantitative investing with a healthy dose of scepticism.";
+  "Documenting a software engineer's journey into algorithmic trading. I'll be analysing the world of financial markets and quantitative investing with a healthy dose of scepticism.";
 
 const posts = (await getCollection("blog")).sort(
   (a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf()

@@ -7,6 +7,7 @@
 - form
 - time element for `FormattedDate` (see tiktokexamples.com)
 - fonts load faster
+- refine description for landing apge and RSS
 
 ## Blog post ideas
 
