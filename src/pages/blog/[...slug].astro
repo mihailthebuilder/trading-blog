@@ -32,7 +32,11 @@ const { Content } = await post.render();
         <a href="/" class="font-bold md:text-xl text-black hover:no-underline"
           >{SITE_TITLE}</a
         >
-        <a href="/rss.xml">RSS</a>
+        <div class="text-sm md:text-base">
+          <a href="/rss.xml">RSS</a>
+          |
+          <a href="#newsletter">Newsletter</a>
+        </div>
       </nav>
     </header>
     <hr class="border-t-1 border-gray-600 mb-5 md:mb-10" />

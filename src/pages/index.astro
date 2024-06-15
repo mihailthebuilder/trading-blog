@@ -27,30 +27,34 @@ const posts = (await getCollection("blog")).sort(
       <h1 class="font-bold md:font-medium text-3xl md:text-5xl mb-2">
         {SITE_TITLE}
       </h1>
-      <a href="/rss.xml">RSS</a>
-      <section class="mt-4 mb-8">
-        <p>
-          Hi! I'm Mihail, a software engineer based in the UK. I'm documenting
-          my journey into algorithmic trading - hopefully you'll find it
-          informative, or at least entertaining.
-        </p>
-        <Disclaimer />
-      </section>
-      <section class="mb-8">
-        <h2 class="font-bold text-3xl mb-3">Posts</h2>
-        <ul class="space-y-1">{posts.map((post) => <Post post={post} />)}</ul>
-      </section>
-      <section>
-        <h2 class="font-bold text-3xl mb-3">Contact</h2>
-        <p>
-          The best way to reach out to me is <a
-            href="https://linkedin.com/in/mihailmarian">via LinkedIn</a
-          >; make sure you add a message in the connection invite. Another
-          option is to use <a href="https://forms.gle/tz3325pey9SjgV9X9"
-            >this hideous form</a
-          >. Include your email address if you'd like me to reply.
-        </p>
-      </section>
+      <div>
+        <a href="/rss.xml">RSS</a>
+        |
+        <a href="#newsletter">Newsletter</a>
+      </div>
     </main>
+    <section class="mt-4 mb-8">
+      <p>
+        Hi! I'm Mihail, a software engineer based in the UK. I'm documenting my
+        journey into algorithmic trading - hopefully you'll find it informative,
+        or at least entertaining.
+      </p>
+      <Disclaimer />
+    </section>
+    <section class="mb-8">
+      <h2 class="font-bold text-3xl mb-3">Posts</h2>
+      <ul class="space-y-1">{posts.map((post) => <Post post={post} />)}</ul>
+    </section>
+    <section>
+      <h2 class="font-bold text-3xl mb-3">Contact</h2>
+      <p>
+        The best way to reach out to me is <a
+          href="https://linkedin.com/in/mihailmarian">via LinkedIn</a
+        >; make sure you add a message in the connection invite. Another option
+        is to use <a href="https://forms.gle/tz3325pey9SjgV9X9"
+          >this hideous form</a
+        >. Include your email address if you'd like me to reply.
+      </p>
+    </section>
   </body>
 </html>
