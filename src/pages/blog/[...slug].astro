@@ -6,6 +6,7 @@ import Footer from "../../components/Footer.astro";
 import Disclaimer from "../../components/Disclaimer.astro";
 import { SITE_TITLE } from "../../consts";
 import { formatDate } from "../../utils";
+import Subscribe from "../../components/Subscribe.astro";
 
 export async function getStaticPaths() {
   const posts = await getCollection("blog");
@@ -32,7 +33,11 @@ const { Content } = await post.render();
         <a href="/" class="font-bold md:text-xl text-black hover:no-underline"
           >{SITE_TITLE}</a
         >
-        <a href="/rss.xml">RSS</a>
+        <div class="text-sm md:text-base">
+          <a href="/rss.xml">RSS</a>
+          |
+          <a href="#newsletter">Newsletter</a>
+        </div>
       </nav>
     </header>
     <hr class="border-t-1 border-gray-600 mb-5 md:mb-10" />
@@ -46,15 +51,16 @@ const { Content } = await post.render();
       </section>
 
       <hr class="border-t-1 border-gray-600 mt-10 mb-10" />
-
       <Disclaimer />
+      <p>Subscribe to the newsletter here:</p>
+      <Subscribe />
 
       <p>
-        Want to talk to me about this post? Hit me up <a
-          href="https://linkedin.com/in/mihailmarian">on LinkedIn</a
-        >; make sure you add a message in the connection invite. Alternatively,
-        use <a href="https://forms.gle/tz3325pey9SjgV9X9">this hideous form</a>.
-        Include your email address if you'd like me to reply.
+        <a href="https://linkedin.com/in/mihailmarian">I'm on LinkedIn</a> for any
+        questions; please add a message when you connect. Alternatively, use <a
+          href="https://forms.gle/tz3325pey9SjgV9X9"
+          >this hideous contact form</a
+        >. Include your email address if you'd like me to reply.
       </p>
     </main>
 

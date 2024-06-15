@@ -6,6 +6,18 @@ a {
   @apply text-blue-600 hover:underline;
 }
 
+#newsletter {
+  .main-form {
+    @apply -ml-1 md:-ml-2;
+  }
+
+  .text-center,
+  .emailoctopus-success-message,
+  .emailoctopus-error-message {
+    @apply !text-left -ml-[0.2rem] !my-0;
+  }
+}
+
 .blogpost-content {
   h2 {
     @apply text-2xl font-bold mb-3;
@@ -25,5 +37,5 @@ a {
 
   p {
     margin-bottom: 1em;
-  }  
+  }
 }
