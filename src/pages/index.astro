@@ -45,6 +45,80 @@ const posts = (await getCollection("blog")).sort(
       <h2 class="font-bold text-3xl mb-3">Posts</h2>
       <ul class="space-y-1">{posts.map((post) => <Post post={post} />)}</ul>
     </section>
+    <section id="newsletter" class="mb-8">
+      <h2 class="font-bold text-3xl mb-3">Newsletter</h2>
+      <form id="subscribeForm">
+        <div>
+          <label for="email" class="hidden">Email</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+        <div class="form-group">
+          <button type="submit">Subscribe</button>
+        </div>
+      </form>
+      <p id="loadingMessage" class="hidden">Loading...</p>
+      <p id="message" class="font-bold"></p>
+      <script>
+        const form = document.getElementById(
+          "subscribeForm"
+        ) as HTMLFormElement;
+
+        form.addEventListener("submit", function (event) {
+          event.preventDefault();
+
+          const loadingMessage = document.getElementById(
+            "loadingMessage"
+          ) as HTMLElement;
+
+          form.classList.add("hidden");
+          loadingMessage.classList.remove("hidden");
+
+          const email = (document.getElementById("email") as HTMLInputElement)
+            .value;
+
+          const url =
+            "https://emailoctopus.com/api/1.6/lists/536f0328-2b3c-11ef-ba6a-7d1543ec5ddc/contacts";
+          const data = {
+            api_key: "cec46b4e-efd5-4016-a8d5-2424ceb1a572",
+            email_address: email,
+          };
+
+          const message = document.getElementById("message") as HTMLElement;
+
+          fetch(url, {
+            method: "POST",
+            headers: {
+              "Content-Type": "application/json",
+            },
+            mode: "no-cors",
+            body: JSON.stringify(data),
+          })
+            .then((response) => {
+              if (!response.ok) {
+                message.innerText = "Something went wrong (T＿T)";
+                message.classList.add("text-red-600");
+                console.error(
+                  `Got status ${response.status} : ${response.statusText}`
+                );
+                return;
+              }
+
+              message.innerText = "Welcome email sent! Check spam (*^‿^*)";
+              message.classList.add("text-red-600");
+            })
+            .catch((error) => {
+              message.innerText = "Something went wrong (T＿T)";
+              message.classList.add("text-red-600");
+              console.error(`Something went wrong : ${error}`);
+              return;
+            })
+            .finally(() => {
+              loadingMessage.classList.add("hidden");
+              message.classList.remove("hidden");
+            });
+        });
+      </script>
+    </section>
     <section>
       <h2 class="font-bold text-3xl mb-3">Contact</h2>
       <p>
