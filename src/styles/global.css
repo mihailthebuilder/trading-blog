@@ -14,7 +14,11 @@ a {
   .text-center,
   .emailoctopus-success-message,
   .emailoctopus-error-message {
-    @apply !text-left -ml-[0.2rem] !my-0;
+    @apply !text-left !my-0;
+  }
+
+  .text-center {
+    @apply -ml-[0.2rem];
   }
 }
 
