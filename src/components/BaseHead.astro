@@ -45,14 +45,3 @@ const { title, description } = Astro.props;
 
 <!-- Sitemap -->
 <link rel="sitemap" href="/sitemap-index.xml" />
-
-<!-- Analytics -->
-{
-  import.meta.env.PROD && (
-    <script
-      defer
-      src="https://um.app.taralys.com/hi"
-      data-website-id="559ab5c2-a86d-4c96-96f2-cc84cb74c3ed"
-    />
-  )
-}
